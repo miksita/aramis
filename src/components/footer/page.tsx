@@ -124,7 +124,7 @@ export default function Footer() {
             </p>
             
             {/* Соцсети */}
-            <div className="flex space-x-4 pt-2">
+            {/* <div className="flex space-x-4 pt-2">
               {['instagram', 'facebook', 'youtube', 'whatsapp'].map((social) => (
                 <a 
                   key={social}
@@ -135,7 +135,7 @@ export default function Footer() {
                   <span className="text-lg">{getSocialIcon(social)}</span>
                 </a>
               ))}
-            </div>
+            </div> */}
           </div>
         </div>
 
@@ -170,12 +170,12 @@ export default function Footer() {
 }
 
 // Иконки соцсетей
-function getSocialIcon(social: string) {
-  switch(social) {
-    case 'instagram': return '📷';
-    case 'facebook': return 'f';
-    case 'youtube': return '▶️';
-    case 'whatsapp': return '💬';
-    default: return '•';
-  }
-}
+// function getSocialIcon(social: string) {
+//   switch(social) {
+//     case 'instagram': return '📷';
+//     case 'facebook': return 'f';
+//     case 'youtube': return '▶️';
+//     case 'whatsapp': return '💬';
+//     default: return '•';
+//   }
+// }

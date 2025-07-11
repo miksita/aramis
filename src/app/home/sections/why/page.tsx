@@ -16,8 +16,8 @@ export default function WhySection() {
       description: t.cards.card_2.description,
     },
     {
-      value: t.cards.card_2.title,
-      description: t.cards.card_2.description,
+      value: t.cards.card_3.title,
+      description: t.cards.card_3.description,
     },
   ];
 
@@ -48,7 +48,7 @@ export default function WhySection() {
           {cardsData.map((card, index) => (
             <article
               key={index}
-              className="bg-gray-200/50 backdrop-blur-lg p-6 rounded-xl md:rounded-3xl transition-all hover:scale-[1.02] md:-ml-16 md:min-h-35"
+              className="bg-white/50 backdrop-blur-lg p-6 shadow-lg rounded-2xl transition-all hover:scale-[1.02] md:-ml-16 md:min-h-35"
             >
               <div className="flex flex-col md:flex-row md:items-start gap-2 md:gap-6 pt-2">
                 <h3 className="text-4xl md:text-6xl font-light md:w-[30%]">

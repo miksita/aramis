@@ -36,7 +36,7 @@ export default function CardsSection() {
         {cardData.map((item, index) => (
           <div
             key={index}
-            className="md:p-8 p-6 md:pb-16 pb-14 rounded-2xl bg-gray-100/50 backdrop-blur-sm border border-gray-100 hover:scale-105 transition-transform duration-300 relative group text-center md:text-start"
+            className="md:p-8 p-6 md:pb-16 pb-14 rounded-2xl shadow-lg bg-white/50 backdrop-blur-sm border border-gray-100 hover:scale-105 transition-transform duration-300 relative group text-start"
           >
             <h3 className="text-card-title mb-1 lg:mb-3">{item.title}</h3>
             <p className="text-card-description ">{item.text}</p>

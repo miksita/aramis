@@ -9,9 +9,8 @@ export default function HeroMobile() {
   const t = MAIN_PAGE.HERO_SECTION;
 
   return (
-    <div className="relative h-screen w-full overflow-hidden">
-      {/* Фон (оставлен внизу) */}
-      <div className="absolute -bottom-0 left-0 right-0 z-0 h-auto">
+    <div className="relative h-[120vh] w-full overflow-hidden mb-8">
+      <div className="absolute bottom-30 left-0 right-0 z-0 h-auto ">
         <Image
           src={HeroBackground}
           alt="Фон главной страницы"
@@ -21,14 +20,12 @@ export default function HeroMobile() {
           style={{
             width: "100%",
             height: "auto",
-            objectPosition: "bottom center",
+            objectPosition: "bottom center ",
           }}
         />
       </div>
 
-      {/* Основной контент */}
       <div className="relative z-10 flex h-full flex-col px-6">
-        {/* Логотип и заголовок */}
         <div className="pt-24 px-4 text-center flex flex-col items-center">
           <Image 
             src={Logo}
@@ -43,20 +40,17 @@ export default function HeroMobile() {
           </p>
         </div>
 
-        {/* Контейнер для стрелки и кнопки (flex-col) */}
-        <div className="mt-auto pb-8 w-full flex flex-col items-center">
-          {/* Стрелка над кнопкой */}
-          <div className="mb-2 w-32"> {/* mb-2 - отступ между стрелкой и кнопкой */}
+        <div className="mt-auto w-full flex flex-col items-center   ">
+          <div className="mb-2 pl-10">
             <Image 
               src={TextArrow}
               alt="Ждём Вас в гости!"
-              className="w-full h-auto"
+              className="w-full h-12"
             />
           </div>
 
-          {/* Кнопка */}
           <button
-            className="py-3 px-8 bg-black text-white text-lg rounded-2xl hover:bg-gray-200 hover:text-gray-800 transition-all duration-300 w-full max-w-xs"
+            className="py-3 px-8 bg-black text-white font-semibold text-lg rounded-2xl hover:bg-gray-200 hover:text-gray-800 transition-all duration-300 w-full "
             aria-label="Записаться в конный клуб"
           >
             {t.button}
