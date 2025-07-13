@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Footer from "@/components/footer/page";
 import Header from "@/components/header/page";
+import Loading from "@/components/Loading";
 import "./globals.css";
 
 
@@ -46,6 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Loading />
               <Header />
               <main className=""> 
           {children} 

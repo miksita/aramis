@@ -61,10 +61,10 @@ const testimonials = [
 
 export default function ReviewsSection() {
   return (
-    <section className="px-6 mt-40 md:px-60">
+    <section className="px-0 mt-40 md:px-60">
       <div className="container mx-auto  ">
-        <h2 className="text-title text-center mb-4">Отзывы наших клиентов</h2>
-                <p className="text-description text-center mb-8">Отзывы наших клиентов</p>
+        <h2 className="text-title text-center mb-4 px-6 md:px-0">Отзывы наших клиентов</h2>
+                <p className="text-description text-center mb-8 px-6 md:px-0">Отзывы наших клиентов</p>
 
         <TestimonialsCarousel testimonials={testimonials} />
       </div>

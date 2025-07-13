@@ -30,7 +30,7 @@ export default function HeroMobile() {
           <Image 
             src={Logo}
             alt="Логотип Арамис"
-            className="h-32 w-32 mb-4" 
+            className="h-30 w-30 mb-4" 
           />
           <h1 className="mb-4 text-4xl font-semibold">
             <AnimatedText>{t.title_top}</AnimatedText>
