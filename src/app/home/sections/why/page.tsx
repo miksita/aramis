@@ -22,7 +22,7 @@ export default function WhySection() {
   ];
 
   return (
-    <main className="px-6 md:px-60 md:pt-20">
+    <main className="px-4 md:px-60 md:pt-20 pt-16">
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 mb-4 md:mb-2">
         <h1 className="text-title flex-shrink-0 md:text-left text-center">
 <AnimatedText>{t.title}</AnimatedText>
@@ -32,7 +32,7 @@ export default function WhySection() {
         </p>
       </div>
 
-      <section className="grid grid-cols-1 md:grid-cols-[65%_35%] gap-6 md:pt-10">
+      <section className="grid grid-cols-1 md:grid-cols-[65%_35%] gap-6 md:pt-10 px-2">
         <figure className="relative h-[300px] md:h-[50vh] w-full">
           <Image
             src={WhyImage}

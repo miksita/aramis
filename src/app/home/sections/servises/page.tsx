@@ -6,6 +6,7 @@ import PhotoshootImage from "../../../../../public/images/servises/photoshoot.we
 // import { GoArrowUpRight } from "react-icons/go";
 import { MAIN_PAGE } from "@/constants/common";
 import { AnimatedText } from "@/components/ui/AnimatedText";
+import { GoArrowUpRight } from "react-icons/go";
 
 export default function ServisesSection() {
   const t = MAIN_PAGE.SERVISES_SECTION;
@@ -35,11 +36,11 @@ export default function ServisesSection() {
 
   return (
     <div className="pt-20 md:pt-20 px-6 md:px-60 min-h-[80vh] pb-10 md:pb-20 text-left ">
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 mb-4 md:mb-12 ">
-        <h1 className="text-title flex-shrink-0 md:text-left text-center ">
+      <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 mb-8 md:mb-12 ">
+        <h1 className="text-title flex-shrink-0 md:text-left text-center  ">
           <AnimatedText>{t.title}</AnimatedText>
         </h1>
-        <p className="text-description md:text-left text-center max-w-2xl">
+        <p className="text-description md:text-left text-center max-w-2xl ">
           <AnimatedText>{t.description}</AnimatedText>
         </p>
       </div>
@@ -66,14 +67,15 @@ export default function ServisesSection() {
                 <p className="text-card-description mb-6">
                   <AnimatedText>{service.description}</AnimatedText>
                 </p>
-                <button className="text-sm px-4 py-2 bg-gray-100 text-gray-500 rounded-xl text-left">Подробнее...
+                <button className="text-sm px-4 py-2 bg-gray-100 text-gray-500 rounded-lg flex items-center gap-1 hover:bg-gray-200 hover:text-black">
+                  Узнать больше <GoArrowUpRight />
                 </button>
               </div>
             </div>
           </div>
         ))}
         <div className="col-span-1 md:col-span-4 md:mt-6 mt-8">
-          <button className="text-simple button-gray w-full">{t.button}</button>
+          <button className="text-simple button-gray  w-full">{t.button}</button>
         </div>
       </div>
     </div>

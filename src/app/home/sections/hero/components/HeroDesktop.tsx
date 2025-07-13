@@ -39,7 +39,7 @@ export default function HeroDesktop() {
               
               <div className="relative">
                 <button
-                  className="py-4 px-16 bg-black text-white text-2xl rounded-3xl hover:bg-gray-200 hover:text-gray-800 transition-all duration-300"
+                  className="py-4 px-16 bg-black text-white text-2xl rounded-3xl hover:bg-gray-200 hover:text-gray-800 transition-all duration-300 "
                   aria-label="Записаться в конный клуб"
                 >
                   {t.button}
@@ -48,7 +48,7 @@ export default function HeroDesktop() {
                   <Image
                     src={TextArrow}
                     alt="Ждём Вас в гости!"
-                    className="w-auto h-32 ml-28" // Подстройте размеры и отступы по вашему дизайну
+                    className="w-auto h-32 ml-28" 
                   />
                 </div>
               </div>
