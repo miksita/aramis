@@ -25,7 +25,7 @@ export default function WhySection() {
     <main className="px-4 md:px-60 md:pt-20 pt-16">
       <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 mb-4 md:mb-2">
         <h1 className="text-title flex-shrink-0 md:text-left text-center">
-<AnimatedText>{t.title}</AnimatedText>
+          <AnimatedText>{t.title}</AnimatedText>
         </h1>
         <p className="text-description md:text-left text-center">
           <AnimatedText>{t.description}</AnimatedText>

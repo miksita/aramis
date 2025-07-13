@@ -5,6 +5,7 @@ import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { useMediaQuery } from 'react-responsive'
 
+
 interface Testimonial {
   id: string
   name: string
@@ -45,7 +46,6 @@ export const TestimonialsCarousel = ({ testimonials }: CarouselProps) => {
     setSelectedIndex(emblaApi.selectedScrollSnap())
   }, [emblaApi])
 
-  // Исправленные обработчики событий для Embla Carousel 8+
   const onDragStart = useCallback(() => {
     setIsDragging(true)
     if (emblaApi?.plugins()?.autoplay) {
@@ -82,7 +82,6 @@ export const TestimonialsCarousel = ({ testimonials }: CarouselProps) => {
     updateSlideSizes()
     onSelect()
     
-    // Исправленные названия событий для Embla 8+
     emblaApi
       .on('select', onSelect)
       .on('pointerDown', onDragStart)
@@ -100,7 +99,7 @@ export const TestimonialsCarousel = ({ testimonials }: CarouselProps) => {
   }, [emblaApi, isMobile, onSelect, onDragStart, onDragEnd, gap, slidesToShow])
 
   return (
-    <div className="mx-auto     ">
+    <div className="mx-auto">
       <div 
         className={`embla overflow-hidden ${isDragging ? 'cursor-grabbing' : 'cursor-grab'} pb-10`}
         ref={emblaRef}
@@ -112,19 +111,19 @@ export const TestimonialsCarousel = ({ testimonials }: CarouselProps) => {
               className="embla__slide relative"
             >
               <div className="bg-white  h-full flex flex-col  hover:shadow-xl shadow-lg  rounded-2xl">
-                <div className="aspect-square mb-4 overflow-hidden rounded-xl ">
+                <div className="aspect-square mb-4 rounded-xl overflow-hidden">
                   <img 
                     src={testimonial.photo} 
                     alt={`${testimonial.name}`}
-                    className="w-full h-full object-cover transition-transform duration-500 hover:scale-105"
+                    className="w-[80vh] h-full object-cover transition-transform duration-500 hover:scale-105"
                     loading="lazy"
                     draggable="false"
                   /> 
                 </div>
                 
                 <div className="flex-grow p-4">
-                  <h4 className="font-medium text-lg mb-2">{testimonial.name}</h4>
-                  <p className="text-gray-600 italic mb-3 text-sm">« {testimonial.text} »</p>
+                  <h4 className="text-card-title text-lg mb-2">{testimonial.name}</h4>
+                  <p className="text-card-description mb-4 italic">« {testimonial.text} »</p>
                   <div className="flex">
                     {[1, 2, 3, 4, 5].map((star) => (
                       <StarIcon key={star} filled={star <= testimonial.rating} />

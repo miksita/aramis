@@ -1,73 +1,23 @@
-import { TestimonialsCarousel } from '@/components/ui/Carousel'
-
-const testimonials = [
-  {
-    id: '1',
-    name: 'Иван Иванов',
-    text: 'Отличный сервис, всё быстро и качественно. Буду рекомендовать друзьям!',
-    rating: 5,
-    photo: '/images/about.webp',
-  },
-  {
-    id: '2',
-    name: 'Мария Петрова',
-    text: 'Очень довольна качеством продукции. Доставка быстрая, сервис на высоте!',
-    rating: 4,
-    photo: '/images/about.webp',
-  },
-  {
-    id: '3',
-    name: 'Алексей Смирнов',
-    text: 'Постоянно заказываю здесь, всегда свежие продукты и отличное обслуживание.',
-    rating: 5,
-    photo: '/images/about.webp',
-  },
-  {
-    id: '4',
-    name: 'Елена Васильева',
-    text: 'Приятно удивлена качеством сервиса. Персонал очень внимательный и вежливый.',
-    rating: 5,
-    photo: '/images/about.webp',
-  },
-  {
-    id: '5',
-    name: 'Елена Васильева',
-    text: 'Приятно удивлена качеством сервиса. Персонал очень внимательный и вежливый.',
-    rating: 5,
-    photo: '/images/about.webp',
-  },
-  {
-    id: '6',
-    name: 'Елена Васильева',
-    text: 'Приятно удивлена качеством сервиса. Персонал очень внимательный и вежливый.',
-    rating: 5,
-    photo: '/images/about.webp',
-  },
-  {
-    id: '7',
-    name: 'Елена Васильева',
-    text: 'Приятно удивлена качеством сервиса. Персонал очень внимательный и вежливый.',
-    rating: 5,
-    photo: '/images/about.webp',
-  },
-  {
-    id: '8',
-    name: 'Елена Васильева',
-    text: 'Приятно удивлена качеством сервиса. Персонал очень внимательный и вежливый.',
-    rating: 5,
-    photo: '/images/about.webp',
-  },
-]
+import { AnimatedText } from "@/components/ui/AnimatedText";
+import { TestimonialsCarousel } from "@/components/ui/Carousel";
+import { MAIN_PAGE } from "@/constants/common";
 
 export default function ReviewsSection() {
-  return (
-    <section className="px-0 mt-40 md:px-60">
-      <div className="container mx-auto  ">
-        <h2 className="text-title text-center mb-4 px-6 md:px-0">Отзывы наших клиентов</h2>
-                <p className="text-description text-center mb-8 px-6 md:px-0">Отзывы наших клиентов</p>
+const t = MAIN_PAGE.REVIEWS_SECTION;
 
-        <TestimonialsCarousel testimonials={testimonials} />
+  return (
+    <section className="px-6 mt-20 md:mt-40 md:px-60">
+       <div className="flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10 mb-4 md:mb-13 ">
+        <h1 className="text-title flex-shrink-0 md:text-left text-center">
+<AnimatedText>{t.title}</AnimatedText>
+        </h1>
+        <p className="text-description md:text-left text-center">
+          <AnimatedText>{t.description}</AnimatedText>
+        </p>
+      </div>
+      <div className="container mx-auto  ">
+        <TestimonialsCarousel testimonials={t.TESTIMONIALS}/>
       </div>
     </section>
-  )
+  );
 }
