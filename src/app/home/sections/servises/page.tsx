@@ -75,7 +75,7 @@ export default function ServisesSection() {
           </div>
         ))}
         <div className="col-span-1 md:col-span-4 md:mt-6 mt-8">
-          <button className="text-simple button-gray  w-full">{t.button}</button>
+          <button className="md:text-simple text-xl button-gray  w-full">{t.button}</button>
         </div>
       </div>
     </div>

@@ -1,5 +1,5 @@
-import Logo from "../../../public/icons/logo.svg";
-import Image from "next/image";
+// import Logo from "../../../public/icons/logo.svg";
+// import Image from "next/image";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();

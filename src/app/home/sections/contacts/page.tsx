@@ -25,7 +25,7 @@ export default function ContactSection() {
             <div className="flex items-start mb-8 md:mb-10">
               <FaPhone className="text-gray-500 mr-4 text-xl" />
               <div>
-                <h3 className="text-card-title mb-2">{t.phone.title}</h3>
+                <h3 className="md:text-card-title text-xl font-bold  mb-2">{t.phone.title}</h3>
                 <a href={`tel:${t.phone.number}`} className="text-simple hover:text-blue-300">
                   {t.phone.number}
                 </a>
@@ -34,7 +34,7 @@ export default function ContactSection() {
             <div className="flex items-start mb-2">
               <FaMapMarkerAlt className="text-gray-500 mr-4 text-xl" />
               <div>
-                <h3 className="text-card-title">{t.address.title}</h3>
+                <h3 className="md:text-card-title text-xl font-bold ">{t.address.title}</h3>
                 <p className="text-simple hover:text-blue-300">{t.address.text}</p>
               </div>
             </div>

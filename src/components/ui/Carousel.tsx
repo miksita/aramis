@@ -4,6 +4,7 @@ import React, { useCallback, useEffect, useState } from 'react'
 import useEmblaCarousel from 'embla-carousel-react'
 import Autoplay from 'embla-carousel-autoplay'
 import { useMediaQuery } from 'react-responsive'
+import Image from 'next/image'
 
 
 interface Testimonial {
@@ -112,7 +113,7 @@ export const TestimonialsCarousel = ({ testimonials }: CarouselProps) => {
             >
               <div className="bg-white  h-full flex flex-col  hover:shadow-xl shadow-lg  rounded-2xl">
                 <div className="aspect-square mb-4 rounded-xl overflow-hidden">
-                  <img 
+                  <Image
                     src={testimonial.photo} 
                     alt={`${testimonial.name}`}
                     className="w-[80vh] h-full object-cover transition-transform duration-500 hover:scale-105"
